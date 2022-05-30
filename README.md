@@ -1,1 +1,1 @@
-# config-check
+获取linux配置信息
