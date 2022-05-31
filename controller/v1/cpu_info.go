@@ -1,8 +1,8 @@
 package v1
 
 import (
-	"config-check-g4/settings"
-	"config-check-g4/utils"
+	"config-check/settings"
+	"config-check/utils"
 	"fmt"
 	"github.com/gin-gonic/gin"
 )
