@@ -14,6 +14,7 @@ func SetupRouter() *gin.Engine {
 	{
 		GroupV1.GET("/ping", v1.Ping)
 		GroupV1.GET("/rpminfo", v1.CheckRPM)
+		GroupV1.GET("/cpuinfo", v1.CpuInfo)
 	}
 
 	//v1.GET("/Allinfo",controller.AllInfo)
