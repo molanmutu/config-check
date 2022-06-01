@@ -5,7 +5,7 @@ base:
   auth: "password"
   publicKey: "/root/.ssh/id_rsa"
   user: "root"
-  passwd: "123456"
+  passwd: "Ricema1p123"
   port: 22
   des_path: "/tmp/xxxaa"           #目标路径
   src_path: "D:\\workspaces\\go\\config-check\\rpm"    #本地路径

@@ -1,0 +1,24 @@
+{"level":"INFO","time":"2022-05-31T14:12:08.438+0800","caller":"logger/logger.go:42","msg":"init logger success"}
+{"level":"INFO","time":"2022-05-31T14:18:59.409+0800","caller":"logger/logger.go:42","msg":"init logger success"}
+{"level":"DEBUG","time":"2022-05-31T14:19:03.874+0800","caller":"v1/cpu_info.go:32","msg":"Get cpu info failed:"}
+{"level":"DEBUG","time":"2022-05-31T14:19:05.786+0800","caller":"v1/cpu_info.go:32","msg":"Get cpu info failed:"}
+{"level":"DEBUG","time":"2022-05-31T14:19:07.634+0800","caller":"v1/cpu_info.go:32","msg":"Get cpu info failed:"}
+{"level":"INFO","time":"2022-05-31T14:22:50.196+0800","caller":"logger/logger.go:42","msg":"init logger success"}
+{"level":"INFO","time":"2022-06-01T11:25:27.259+0800","caller":"logger/logger.go:42","msg":"init logger success"}
+{"level":"DEBUG","time":"2022-06-01T11:25:47.559+0800","caller":"v1/cpu_info.go:32","msg":"Get cpu info failed:"}
+{"level":"DEBUG","time":"2022-06-01T11:25:49.512+0800","caller":"v1/cpu_info.go:32","msg":"Get cpu info failed:"}
+{"level":"DEBUG","time":"2022-06-01T11:25:51.407+0800","caller":"v1/cpu_info.go:32","msg":"Get cpu info failed:"}
+{"level":"DEBUG","time":"2022-06-01T11:26:20.094+0800","caller":"v1/cpu_info.go:32","msg":"Get cpu info failed:"}
+{"level":"DEBUG","time":"2022-06-01T11:26:22.091+0800","caller":"v1/cpu_info.go:32","msg":"Get cpu info failed:"}
+{"level":"ERROR","time":"2022-06-01T11:26:24.299+0800","caller":"v1/mem_info.go:34","msg":"获取内存信息失败","ip":"192.168.10.86","command":"free -h|grep 'Mem:'|awk '{print $2}'","error":"ssh: handshake failed: ssh: unable to authenticate, attempted methods [none password], no supported methods remain"}
+{"level":"DEBUG","time":"2022-06-01T11:26:24.349+0800","caller":"v1/cpu_info.go:32","msg":"Get cpu info failed:"}
+{"level":"ERROR","time":"2022-06-01T11:26:25.973+0800","caller":"v1/mem_info.go:34","msg":"获取内存信息失败","ip":"192.168.10.87","command":"free -h|grep 'Mem:'|awk '{print $2}'","error":"ssh: handshake failed: ssh: unable to authenticate, attempted methods [none password], no supported methods remain"}
+{"level":"ERROR","time":"2022-06-01T11:26:27.838+0800","caller":"v1/mem_info.go:34","msg":"获取内存信息失败","ip":"192.168.10.88","command":"free -h|grep 'Mem:'|awk '{print $2}'","error":"ssh: handshake failed: ssh: unable to authenticate, attempted methods [none password], no supported methods remain"}
+{"level":"INFO","time":"2022-06-01T11:27:09.613+0800","caller":"logger/logger.go:42","msg":"init logger success"}
+{"level":"ERROR","time":"2022-06-01T11:27:15.957+0800","caller":"v1/mem_info.go:34","msg":"获取内存信息失败","ip":"192.168.10.86","command":"free -h|grep 'Mem:'|awk '{print $2}'","error":"ssh: handshake failed: ssh: unable to authenticate, attempted methods [none password], no supported methods remain"}
+{"level":"ERROR","time":"2022-06-01T11:27:18.363+0800","caller":"v1/mem_info.go:34","msg":"获取内存信息失败","ip":"192.168.10.87","command":"free -h|grep 'Mem:'|awk '{print $2}'","error":"ssh: handshake failed: ssh: unable to authenticate, attempted methods [none password], no supported methods remain"}
+{"level":"ERROR","time":"2022-06-01T11:27:20.317+0800","caller":"v1/mem_info.go:34","msg":"获取内存信息失败","ip":"192.168.10.88","command":"free -h|grep 'Mem:'|awk '{print $2}'","error":"ssh: handshake failed: ssh: unable to authenticate, attempted methods [none password], no supported methods remain"}
+{"level":"INFO","time":"2022-06-01T11:29:41.445+0800","caller":"logger/logger.go:42","msg":"init logger success"}
+{"level":"ERROR","time":"2022-06-01T11:29:50.137+0800","caller":"v1/cpu_info.go:32","msg":"获取cpu信息失败","ip":"192.168.10.86","command":"cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c","error":"ssh: handshake failed: ssh: unable to authenticate, attempted methods [none password], no supported methods remain"}
+{"level":"ERROR","time":"2022-06-01T11:29:51.964+0800","caller":"v1/cpu_info.go:32","msg":"获取cpu信息失败","ip":"192.168.10.87","command":"cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c","error":"ssh: handshake failed: ssh: unable to authenticate, attempted methods [none password], no supported methods remain"}
+{"level":"ERROR","time":"2022-06-01T11:29:54.067+0800","caller":"v1/cpu_info.go:32","msg":"获取cpu信息失败","ip":"192.168.10.88","command":"cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c","error":"ssh: handshake failed: ssh: unable to authenticate, attempted methods [none password], no supported methods remain"}

@@ -5,6 +5,7 @@ import (
 	"config-check/utils"
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"go.uber.org/zap"
 )
 
 //获取命令
@@ -28,7 +29,8 @@ func checkCPUInfo(ip string) (out string) {
 	command := rpmCPUCommand()
 	output, err := cli.Run(command)
 	if err != nil {
-		fmt.Println("Get cpu info failed: ", err)
+		zap.L().Error("获取cpu信息失败", zap.String("ip", ip), zap.String("command", command), zap.Error(err))
+		return
 	}
 	mb := fmt.Sprintf("cpu info is :------%v", output)
 	return mb

@@ -12,13 +12,15 @@ func SetupRouter() *gin.Engine {
 	//v1版本
 	GroupV1 := r.Group("/api/v1")
 	{
-		GroupV1.GET("/ping", v1.Ping)
-		GroupV1.GET("/rpminfo", v1.CheckRPM)
-		GroupV1.GET("/cpuinfo", v1.CpuInfo)
+		GroupV1.GET("/ping", v1.Ping)        //测试服务器是否通信
+		GroupV1.GET("/rpminfo", v1.CheckRPM) //检查rpm包是否存在
+		GroupV1.GET("/cpuinfo", v1.CpuInfo)  //cpu信息
+		GroupV1.GET("/meminfo", v1.MemInfo)  //内存信息
 	}
 
 	//v1.GET("/Allinfo",controller.AllInfo)
 
+	//
 	r.NoRoute(func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
 			"msg": "404",
