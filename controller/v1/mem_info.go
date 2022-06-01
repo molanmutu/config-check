@@ -8,12 +8,10 @@ import (
 	"go.uber.org/zap"
 )
 
-//获取命令
 func memCommand() (version string) {
 	return "free -h|grep 'Mem:'|awk '{print $2}'"
 }
 
-// MemInfo 获取内存信息
 func MemInfo(c *gin.Context) {
 	ip := *settings.Conf.LocalServerInfo
 	for _, i2 := range ip.Servers {
@@ -24,7 +22,7 @@ func MemInfo(c *gin.Context) {
 	}
 }
 
-// checkMenInfo 检查内存信息
+// checkMenInfo：获取内存信息
 func checkMenInfo(ip string) (out string) {
 	cli := utils.New(ip)
 	fmt.Printf("%v\n", ip)

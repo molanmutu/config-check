@@ -8,7 +8,6 @@ import (
 	"go.uber.org/zap"
 )
 
-//获取命令
 func rpmCPUCommand() (version string) {
 	return "cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c"
 }
@@ -23,6 +22,7 @@ func CpuInfo(c *gin.Context) {
 	}
 }
 
+// checkCPUInfo：获取cpu信息
 func checkCPUInfo(ip string) (out string) {
 	cli := utils.New(ip)
 	fmt.Printf("%v\n", ip)

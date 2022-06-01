@@ -8,12 +8,10 @@ import (
 	"go.uber.org/zap"
 )
 
-// 获取命令
 func rpmCommand() (version string) {
 	return "rpm -q nmap-ncat"
 }
 
-// CheckRPM 返回json给前端
 func CheckRPM(c *gin.Context) {
 	ip := *settings.Conf.LocalServerInfo
 	for _, i2 := range ip.Servers {
@@ -24,7 +22,7 @@ func CheckRPM(c *gin.Context) {
 	}
 }
 
-//拷贝rpm包并安装
+// checkRpmInfo：拷贝rpm包并安装
 func checkRpmInfo(ip string) (out string) {
 	cli := utils.New(ip)
 	fmt.Printf("%v\n", ip)

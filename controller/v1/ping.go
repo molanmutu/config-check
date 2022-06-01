@@ -8,7 +8,6 @@ import (
 	"os/exec"
 )
 
-// Ping 获取是否通信
 func Ping(c *gin.Context) {
 	ip := *settings.Conf.LocalServerInfo
 	for _, i2 := range ip.Servers {
@@ -19,6 +18,7 @@ func Ping(c *gin.Context) {
 	}
 }
 
+// netWorkStatus 检测服务器状态是否正常
 func netWorkStatus(ip string) bool {
 	cmd := exec.Command("ping", ip)
 	err := cmd.Run()

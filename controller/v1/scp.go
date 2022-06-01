@@ -10,6 +10,7 @@ import (
 	"strings"
 )
 
+// ScpRPM 判断是否需要拷贝
 func ScpRPM(c *utils.Cli) {
 	var _ error
 	srcPath := c.Src
@@ -42,6 +43,7 @@ func ScpRPM(c *utils.Cli) {
 	})
 }
 
+// scp拷贝文件
 func scp(client *ssh.Client, File io.Reader, size int64, path string) {
 	filename := filepath.Base(path)
 	dirname := strings.Replace(filepath.Dir(path), "\\", "/", -1)
@@ -78,6 +80,7 @@ func scp(client *ssh.Client, File io.Reader, size int64, path string) {
 	}
 }
 
+// Mkdir 创建目录
 func mkdir(client *ssh.Client, path string) {
 	fmt.Printf("create path %s\n", path)
 	session, err := client.NewSession()
